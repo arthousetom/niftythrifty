@@ -202,9 +202,21 @@ const getDisplayText = () => {
         >
           ...mehr anzeigen
         </button>
-  </p>
-</div>
-</div></div</div>
+      )}
+      {isExpanded && (
+        <button
+          onClick={() => setIsExpanded(false)}
+          className="expand-button"
+          aria-label="Text einklappen"
+        >
+          ...weniger anzeigen
+        </button>
+      )}
+    </p>
+  </div>
+</div> {/* <-- Schließt .text-content */}
+        </div> {/* <-- Schließt .content-box */}
+      </div> {/* <-- Schließt .content-wrapper */}
     )}
     {isExpanded && (
       <button
