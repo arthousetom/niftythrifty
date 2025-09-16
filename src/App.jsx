@@ -1,3 +1,23 @@
+import React from "react";
+import {
+  motion,
+  useScroll,
+  useTransform,
+  useInView,
+  AnimatePresence,
+} from "framer-motion";
+import { useRef } from "react";
+import "./App.css";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link,
+  useLocation,
+} from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Menu, X, Clock, MapPin, Star, Heart } from "lucide-react";
+
 const Homepage = () => {
   const [activeTab, setActiveTab] = useState("Startseite");
   const [lightboxImage, setLightboxImage] = useState(null);
@@ -5,13 +25,13 @@ const Homepage = () => {
   const [displayText, setDisplayText] = useState("");
   const fullText = "- 1st Class 2nd Hand -";
 
-  // 👇 Zustände für den Willkommenstext - AUF OBERSTER EBENE
+  // 👇 Zustände für den Willkommenstext - AUF OBERSTER EBENE deklarieren
   const [isExpanded, setIsExpanded] = useState(false);
   const fullWelcomeText = `Hallo, Ihr Lieben!
 Herzlich willkommen in meinem einzigartigen Thrift Store. Auf über 350 Quadratmetern präsentiere ich Euch in einem Ambiente, das seinesgleichen sucht, ein riesiges Angebot an wundervoller Secondhand Mode – sowohl für die Dame als auch für den Hernn. Vintage- und Designermode, Schuhe, Taschen, Modeschmuck, Accessoires, Mobiliar, Geschenkartikel – alles will von Euch entdeckt werden. Lasst Euch inspirieren und verzaubern! Ich freue mich auf Euren Besuch!
 Euer Thomas Meyer`;
 
-  // Die Funktion getNextOpeningTime() sollte dann nur noch die Logik enthalten:
+  // Die Funktion getNextOpeningTime() enthält jetzt nur noch reine Logik
   const getNextOpeningTime = () => {
     const now = new Date();
     const day = now.getDay();
@@ -21,6 +41,7 @@ Euer Thomas Meyer`;
       const hours = now.getHours();
       const minutes = now.getMinutes();
       const currentTime = hours * 60 + minutes;
+      // 👉 fullWelcomeText und useState sind hier NICHT mehr vorhanden!
       if (currentTime < 600) {
         return "heute 10:00";
       } else if (currentTime >= 1080) {
