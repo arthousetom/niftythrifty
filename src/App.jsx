@@ -186,7 +186,7 @@ const getDisplayText = () => {
             </div>
 
             <div className="text-content">
-              <div className="welcome-card">
+             <div className="welcome-card">
   <p className="text-paragraph">
     {getDisplayText().split('\n').map((line, index) => (
       <React.Fragment key={index}>
@@ -213,6 +213,7 @@ const getDisplayText = () => {
       </button>
     )}
   </p>
+</div>
 
             <div className="opening-hours">
               <h3 className="section-title">
