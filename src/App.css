@@ -417,6 +417,10 @@
   object-fit: cover;
   position: relative;
   z-index: 1;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;           /* 👈 WICHTIG: Macht den Kreis! */
+  object-fit: cover;
 }
 
 .avatar-image:hover {
@@ -502,6 +506,8 @@
     width: 120px;
     height: 120px;
     align-self: center;
+    border-radius: 50%;           /* 👈 WICHTIG: Macht den Kreis! */
+    object-fit: cover; 
   }
 
   .address-info {
@@ -1566,6 +1572,7 @@ h4 {
     border-color: #ff0000;
   } /* Roter Cursor */
 }
+
 
 
 
