@@ -214,7 +214,6 @@ const getDisplayText = () => {
     )}
   </p>
 </div>
-
             <div className="opening-hours">
               <h3 className="section-title">
                 <Clock className="inline-icon" />
