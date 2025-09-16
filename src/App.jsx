@@ -32,37 +32,47 @@ Herzlich willkommen in meinem einzigartigen Thrift Store. Auf über 350 Quadratm
 Euer Thomas Meyer`;
 
   // Die Funktion getNextOpeningTime() enthält jetzt nur noch reine Logik
-  const getNextOpeningTime = () => {
-    const now = new Date();
-    const day = now.getDay();
-    if (day === 0 || day === 1 || day === 2) {
-      return "Mittwoch 10:00";
-    } else if (day === 3 || day === 4 || day === 5) {
-      const hours = now.getHours();
-      const minutes = now.getMinutes();
-      const currentTime = hours * 60 + minutes;
-      // 👉 fullWelcomeText und useState sind hier NICHT mehr vorhanden!
-      if (currentTime < 600) {
-        return "heute 10:00";
-      } else if (currentTime >= 1080) {
-        if (day === 5) {
-          return "Samstag 10:00";
-        } else {
-          return "morgen 10:00";
-        }
-      }
-    } else if (day === 6) {
-      const hours = now.getHours();
-      const minutes = now.getMinutes();
-      const currentTime = hours * 60 + minutes;
-      if (currentTime < 600) {
-        return "heute 10:00";
-      } else if (currentTime >= 840) {
-        return "Mittwoch 10:00";
+ const getNextOpeningTime = () => {
+  const now = new Date();
+  const day = now.getDay();
+  if (day === 0 || day === 1 || day === 2) {
+    // Sunday, Monday, Tuesday
+    return "Mittwoch 10:00";
+  } else if (day === 3 || day === 4 || day === 5) {
+    // Wednesday, Thursday, Friday
+    const hours = now.getHours();
+    const minutes = now.getMinutes();
+    const currentTime = hours * 60 + minutes;
+    // 👉 Die folgenden zwei Zeilen waren der FEHLER und wurden entfernt:
+    // const fullWelcomeText = `...`;
+    // const [isExpanded, setIsExpanded] = useState(false);
+    if (currentTime < 600) {
+      // Before 10:00
+      return "heute 10:00";
+    } else if (currentTime >= 1080) {
+      // After 18:00
+      if (day === 5) {
+        // Friday
+        return "Samstag 10:00";
+      } else {
+        return "morgen 10:00";
       }
     }
-    return "";
-  };
+  } else if (day === 6) {
+    // Saturday
+    const hours = now.getHours();
+    const minutes = now.getMinutes();
+    const currentTime = hours * 60 + minutes;
+    if (currentTime < 600) {
+      // Before 10:00
+      return "heute 10:00";
+    } else if (currentTime >= 840) {
+      // After 14:00
+      return "Mittwoch 10:00";
+    }
+  }
+  return "";
+};
 
   return (
     <div className="homepage-content">
