@@ -18,61 +18,131 @@ import {
 import { useEffect, useState } from "react";
 import { Menu, X, Clock, MapPin, Star, Heart } from "lucide-react";
 
+// Importing page components
 const Homepage = () => {
   const [activeTab, setActiveTab] = useState("Startseite");
+
+  // 👇 Zustände für die Lightbox - MUSS auf oberster Ebene sein
   const [lightboxImage, setLightboxImage] = useState(null);
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
-  const [displayText, setDisplayText] = useState("");
-  const fullText = "- 1st Class 2nd Hand -";
 
-  // 👇 Zustände für den Willkommenstext - AUF OBERSTER EBENE deklarieren
-  const [isExpanded, setIsExpanded] = useState(false);
-  const fullWelcomeText = `Hallo, Ihr Lieben!
-Herzlich willkommen in meinem einzigartigen Thrift Store. Auf über 350 Quadratmetern präsentiere ich Euch in einem Ambiente, das seinesgleichen sucht, ein riesiges Angebot an wundervoller Secondhand Mode – sowohl für die Dame als auch für den Hernn. Vintage- und Designermode, Schuhe, Taschen, Modeschmuck, Accessoires, Mobiliar, Geschenkartikel – alles will von Euch entdeckt werden. Lasst Euch inspirieren und verzaubern! Ich freue mich auf Euren Besuch!
-Euer Thomas Meyer`;
+  const [displayText, setDisplayText] = useState(""); // 👈 Neuer State
+  const fullText = "- 1st Class 2nd Hand -"; // Der vollständige Text
 
-  // Die Funktion getNextOpeningTime() enthält jetzt nur noch reine Logik
- const getNextOpeningTime = () => {
-  const now = new Date();
-  const day = now.getDay();
-  if (day === 0 || day === 1 || day === 2) {
-    // Sunday, Monday, Tuesday
-    return "Mittwoch 10:00";
-  } else if (day === 3 || day === 4 || day === 5) {
-    // Wednesday, Thursday, Friday
+  useEffect(() => {
+    // 👈 Neuer Effect für die Animation
+    let index = 0;
+    const interval = setInterval(() => {
+      setDisplayText(fullText.slice(0, index + 1));
+      index++;
+      if (index >= fullText.length) {
+        clearInterval(interval);
+      }
+    }, 100); // Geschwindigkeit: Alle 100ms ein neues Zeichen. Anpassbar.
+
+    // Cleanup-Funktion, um das Intervall zu löschen, wenn die Komponente unmountet.
+    return () => clearInterval(interval);
+  }, []);
+
+  // 👇 Handler-Funktionen - ebenfalls auf oberster Ebene
+  const openLightbox = (imageName, folder) => {
+    console.log("openLightbox aufgerufen mit:", imageName, folder); // <-- Dies hinzufügen
+    setLightboxImage({
+      src: `/images/${folder}/${imageName}`,
+      alt: imageName,
+    });
+    setIsLightboxOpen(true);
+    document.body.style.overflow = "hidden";
+  };
+
+  const closeLightbox = () => {
+    setIsLightboxOpen(false);
+    setLightboxImage(null);
+    document.body.style.overflow = ""; // Scrollen wieder erlauben
+  };
+
+  // 👇 Effekt für die Esc-Taste - DIESER useEffect ist korrekt
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") {
+        closeLightbox();
+      }
+    };
+
+    if (isLightboxOpen) {
+      window.addEventListener("keydown", handleKeyDown);
+    }
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isLightboxOpen]); // Abhängigkeit ist hier korrekt
+
+  const checkOpeningHours = () => {
+    const now = new Date();
+    const day = now.getDay(); // 0 = Sunday, 1 = Monday, ..., 6 = Saturday
     const hours = now.getHours();
     const minutes = now.getMinutes();
-    const currentTime = hours * 60 + minutes;
-    // 👉 Die folgenden zwei Zeilen waren der FEHLER und wurden entfernt:
-    // const fullWelcomeText = `...`;
-    // const [isExpanded, setIsExpanded] = useState(false);
-    if (currentTime < 600) {
-      // Before 10:00
-      return "heute 10:00";
-    } else if (currentTime >= 1080) {
-      // After 18:00
-      if (day === 5) {
-        // Friday
-        return "Samstag 10:00";
-      } else {
-        return "morgen 10:00";
+    const currentTime = hours * 60 + minutes; // Convert to minutes for easier comparison
+
+    // Opening hours: Mi-Fr 10-18, Sa 10-14
+    // Wednesday = 3, Thursday = 4, Friday = 5, Saturday = 6
+    if (day >= 3 && day <= 5) {
+      // Wednesday to Friday
+      return currentTime >= 600 && currentTime < 1080; // 10:00 to 18:00
+    } else if (day === 6) {
+      // Saturday
+      return currentTime >= 600 && currentTime < 840; // 10:00 to 14:00
+    }
+    return false; // Closed on Sunday, Monday, Tuesday
+  };
+
+  const { scrollYProgress } = useScroll();
+  const y1 = useTransform(scrollYProgress, [0, 1], [0, -50]);
+  const y2 = useTransform(scrollYProgress, [0, 1], [0, 50]);
+
+  const getNextOpeningTime = () => {
+    const now = new Date();
+    const day = now.getDay();
+
+    if (day === 0 || day === 1 || day === 2) {
+      // Sunday, Monday, Tuesday
+      return "Mittwoch 10:00";
+    } else if (day === 3 || day === 4 || day === 5) {
+      // Wednesday, Thursday, Friday
+      const hours = now.getHours();
+      const minutes = now.getMinutes();
+      const currentTime = hours * 60 + minutes;
+
+      if (currentTime < 600) {
+        // Before 10:00
+        return "heute 10:00";
+      } else if (currentTime >= 1080) {
+        // After 18:00
+        if (day === 5) {
+          // Friday
+          return "Samstag 10:00";
+        } else {
+          return "morgen 10:00";
+        }
+      }
+    } else if (day === 6) {
+      // Saturday
+      const hours = now.getHours();
+      const minutes = now.getMinutes();
+      const currentTime = hours * 60 + minutes;
+
+      if (currentTime < 600) {
+        // Before 10:00
+        return "heute 10:00";
+      } else if (currentTime >= 840) {
+        // After 14:00
+        return "Mittwoch 10:00";
       }
     }
-  } else if (day === 6) {
-    // Saturday
-    const hours = now.getHours();
-    const minutes = now.getMinutes();
-    const currentTime = hours * 60 + minutes;
-    if (currentTime < 600) {
-      // Before 10:00
-      return "heute 10:00";
-    } else if (currentTime >= 840) {
-      // After 14:00
-      return "Mittwoch 10:00";
-    }
-  }
-  return "";
-};
+
+    return "";
+  };
 
   return (
     <div className="homepage-content">
@@ -102,32 +172,20 @@ Euer Thomas Meyer`;
             <div className="text-content">
               <div className="welcome-card">
                 <p className="text-paragraph">
-                  {getDisplayText()
-                    .split("\n")
-                    .map((line, index) => (
-                      <React.Fragment key={index}>
-                        {line}
-                        <br />
-                      </React.Fragment>
-                    ))}
-                  {!isExpanded && (
-                    <button
-                      onClick={() => setIsExpanded(true)}
-                      className="expand-button"
-                      aria-label="Den vollständigen Text anzeigen"
-                    >
-                      ...mehr anzeigen
-                    </button>
-                  )}
-                  {isExpanded && (
-                    <button
-                      onClick={() => setIsExpanded(false)}
-                      className="expand-button"
-                      aria-label="Text einklappen"
-                    >
-                      ...weniger anzeigen
-                    </button>
-                  )}
+                  <strong>Hallo, Ihr Lieben!</strong>
+                  <br />
+                  <br />
+                  Herzlich willkommen in meinem einzigartigen Thrift Store. Auf
+                  über 350 Quadratmetern präsentiere ich Euch in einem Ambiente,
+                  das seinesgleichen sucht, ein riesiges Angebot an wundervoller
+                  Secondhand Mode – sowohl für die Dame als auch für den Hernn.
+                  Vintage- und Designermode, Schuhe, Taschen, Modeschmuck,
+                  Accessoires, Mobiliar, Geschenkartikel – alles will von Euch
+                  entdeckt werden. Lasst Euch inspirieren und verzaubern! Ich
+                  freue mich auf Euren Besuch!
+                  <br />
+                  <br />
+                  <i>Euer Thomas Meyer</i>
                 </p>
               </div>
             </div>
@@ -307,11 +365,7 @@ Euer Thomas Meyer`;
                           damping: 10,
                         }}
                       >
-                        <img
-                          src="/images/avatar.png"
-                          alt="nifty thrifty"
-                          className="avatar-image"
-                        />
+                        <span>NT</span>
                       </motion.div>
                     </div>
                     <div className="instagram-info">
