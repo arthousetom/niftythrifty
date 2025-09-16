@@ -365,11 +365,9 @@ const Homepage = () => {
                           damping: 10,
                         }}
                       >
-                        <img
-                          src="/images/avatar.png"
-                          alt="nifty thrifty"
-                          className="avatar-image"
-                        />
+                        <span>
+                        NT
+                        </span>
                       </motion.div>
                     </div>
                     <div className="instagram-info">
