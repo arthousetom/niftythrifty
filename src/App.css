@@ -13,6 +13,20 @@
     object-fit: cover;            /* 👈 WICHTIG: Verhindert Verzerrung */
     align-self: center;
   }
+  .expand-button {
+  background: none;
+  border: none;
+  color: #c00;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 5px 0;
+  font-size: 1em;
+  text-decoration: underline;
+}
+
+.expand-button:hover {
+  color: #800;
+}
 }
 
 /* Instagram Section Styles */
@@ -1572,6 +1586,7 @@ h4 {
     border-color: #ff0000;
   } /* Roter Cursor */
 }
+
 
 
 
