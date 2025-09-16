@@ -21,6 +21,7 @@ import { Menu, X, Clock, MapPin, Star, Heart } from "lucide-react";
 // Importing page components
 const Homepage = () => {
   const [activeTab, setActiveTab] = useState("Startseite");
+  const [isExpanded, setIsExpanded] = useState(false);
 
   // 👇 Zustände für die Lightbox - MUSS auf oberster Ebene sein
   const [lightboxImage, setLightboxImage] = useState(null);
@@ -29,6 +30,21 @@ const Homepage = () => {
   const [displayText, setDisplayText] = useState(""); // 👈 Neuer State
   const fullText = "- 1st Class 2nd Hand -"; // Der vollständige Text
 
+  const fullWelcomeText = `Hallo, Ihr Lieben!
+
+Herzlich willkommen in meinem einzigartigen Thrift Store. Auf über 350 Quadratmetern präsentiere ich Euch in einem Ambiente, das seinesgleichen sucht, ein riesiges Angebot an wundervoller Secondhand Mode – sowohl für die Dame als auch für den Hernn. Vintage- und Designermode, Schuhe, Taschen, Modeschmuck, Accessoires, Mobiliar, Geschenkartikel – alles will von Euch entdeckt werden. Lasst Euch inspirieren und verzaubern! Ich freue mich auf Euren Besuch!
+
+Euer Thomas Meyer`;
+
+const getDisplayText = () => {
+  if (isExpanded) {
+    return fullWelcomeText;
+  }
+  // Teilt den Text in Zeilen auf und zeigt nur die ersten 3 Zeilen an
+  const lines = fullWelcomeText.split('\n');
+  return lines.slice(0, 3).join('\n'); // Zeigt "Hallo...", "Herzlich willkommen..." und die erste Hälfte des Satzes
+};
+  
   useEffect(() => {
     // 👈 Neuer Effect für die Animation
     let index = 0;
@@ -171,24 +187,32 @@ const Homepage = () => {
 
             <div className="text-content">
               <div className="welcome-card">
-                <p className="text-paragraph">
-                  <strong>Hallo, Ihr Lieben!</strong>
-                  <br />
-                  <br />
-                  Herzlich willkommen in meinem einzigartigen Thrift Store. Auf
-                  über 350 Quadratmetern präsentiere ich Euch in einem Ambiente,
-                  das seinesgleichen sucht, ein riesiges Angebot an wundervoller
-                  Secondhand Mode – sowohl für die Dame als auch für den Hernn.
-                  Vintage- und Designermode, Schuhe, Taschen, Modeschmuck,
-                  Accessoires, Mobiliar, Geschenkartikel – alles will von Euch
-                  entdeckt werden. Lasst Euch inspirieren und verzaubern! Ich
-                  freue mich auf Euren Besuch!
-                  <br />
-                  <br />
-                  <i>Euer Thomas Meyer</i>
-                </p>
-              </div>
-            </div>
+  <p className="text-paragraph">
+    {getDisplayText().split('\n').map((line, index) => (
+      <React.Fragment key={index}>
+        {line}
+        <br />
+      </React.Fragment>
+    ))}
+    {!isExpanded && (
+      <button
+        onClick={() => setIsExpanded(true)}
+        className="expand-button"
+        aria-label="Den vollständigen Text anzeigen"
+      >
+        ...mehr anzeigen
+      </button>
+    )}
+    {isExpanded && (
+      <button
+        onClick={() => setIsExpanded(false)}
+        className="expand-button"
+        aria-label="Text einklappen"
+      >
+        ...weniger anzeigen
+      </button>
+    )}
+  </p>
 
             <div className="opening-hours">
               <h3 className="section-title">
