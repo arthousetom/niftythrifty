@@ -609,7 +609,7 @@ body {
   background: var(--primary-blue);
   backdrop-filter: blur(20px);
   padding: 1rem 0;
-  box-shadow: var(--shadow);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 0 0 2rem 2rem;
   position: fixed;
   top: 0;
@@ -632,12 +632,14 @@ body {
   font-weight: 700;
   font-size: 1.5rem;
   color: var(--gold);
+  font-style: italic;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .brand-link {
   text-decoration: none;
   color: inherit;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .mobile-menu-btn {
@@ -700,6 +702,7 @@ body {
 
 .nav-tab:not(.active):hover {
   background: rgba(255, 255, 255, 0.15);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   transform: translateY(-1px);
   color: var(--white);
 }
