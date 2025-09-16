@@ -186,7 +186,61 @@ const getDisplayText = () => {
             </div>
 
             <div className="text-content">
-             <div className="welcome-card">
+<div className="welcome-card">
+  <p className="text-paragraph">
+    {getDisplayText().split('\n').map((line, index) => (
+      <React.Fragment key={index}>
+        {line}
+        <br />
+      </React.Fragment>
+    ))}
+    {!isExpanded && (
+      <button
+        onClick={() => setIsExpanded(true)}
+        className="expand-button"
+        aria-label="Den vollständigen Text anzeigen"
+      >
+        ...mehr anzeigen
+      </button>
+    )}
+    {isExpanded && (
+      <button
+        onClick={() => setIsExpanded(false)}
+        className="expand-button"
+        aria-label="Text einklappen"
+      >
+        ...weniger anzeigen
+      </button>
+    )}
+  </p>
+</div><div className="welcome-card">
+  <p className="text-paragraph">
+    {getDisplayText().split('\n').map((line, index) => (
+      <React.Fragment key={index}>
+        {line}
+        <br />
+      </React.Fragment>
+    ))}
+    {!isExpanded && (
+      <button
+        onClick={() => setIsExpanded(true)}
+        className="expand-button"
+        aria-label="Den vollständigen Text anzeigen"
+      >
+        ...mehr anzeigen
+      </button>
+    )}
+    {isExpanded && (
+      <button
+        onClick={() => setIsExpanded(false)}
+        className="expand-button"
+        aria-label="Text einklappen"
+      >
+        ...weniger anzeigen
+      </button>
+    )}
+  </p>
+</div><div className="welcome-card">
   <p className="text-paragraph">
     {getDisplayText().split('\n').map((line, index) => (
       <React.Fragment key={index}>
