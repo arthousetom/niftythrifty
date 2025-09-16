@@ -430,102 +430,425 @@ const Datenschutzerklaerung = () => {
               <h2 className="sub-title">- 1st Class 2nd Hand -</h2>
             </div>
             <div className="legal-content">
-              <h2>Datenschutzerklärung</h2>
-              <p>
-                <em>Transparenz und Sicherheit für Ihre Daten</em>
-              </p>
-
               <div className="legal-section">
-                <h3>
-                  I. Informationen über die Verarbeitung Ihrer Daten gemäß Art.
-                  13 DS-GVO
+                <h2 class="wp-block-heading">Datenschutzerklärung</h2>
+                <p>
+                  Personenbezogene Daten (nachfolgend zumeist nur „Daten“
+                  genannt) werden von uns nur im Rahmen der Erforderlichkeit
+                  sowie zum Zwecke der Bereitstellung eines funktionsfähigen und
+                  nutzerfreundlichen Internetauftritts, inklusive seiner Inhalte
+                  und der dort angebotenen Leistungen, verarbeitet.
+                </p>
+                <p>
+                  Gemäß Art. 4 Ziffer 1. der Verordnung (EU) 2016/679, also der
+                  Datenschutz-Grundverordnung (nachfolgend nur „DSGVO“ genannt),
+                  gilt als „Verarbeitung“ jeder mit oder ohne Hilfe
+                  automatisierter Verfahren ausgeführter Vorgang oder jede
+                  solche Vorgangsreihe im Zusammenhang mit personenbezogenen
+                  Daten, wie das Erheben, das Erfassen, die Organisation, das
+                  Ordnen, die Speicherung, die Anpassung oder Veränderung, das
+                  Auslesen, das Abfragen, die Verwendung, die Offenlegung durch
+                  Übermittlung, Verbreitung oder eine andere Form der
+                  Bereitstellung, den Abgleich oder die Verknüpfung, die
+                  Einschränkung, das Löschen oder die Vernichtung.
+                </p>
+                <p>
+                  Mit der nachfolgenden Datenschutzerklärung informieren wir Sie
+                  insbesondere über Art, Umfang, Zweck, Dauer und
+                  Rechtsgrundlage der Verarbeitung personenbezogener Daten,
+                  soweit wir entweder allein oder gemeinsam mit anderen über die
+                  Zwecke und Mittel der Verarbeitung entscheiden. Zudem
+                  informieren wir Sie nachfolgend über die von uns zu
+                  Optimierungszwecken sowie zur Steigerung der Nutzungsqualität
+                  eingesetzten Fremdkomponenten, soweit hierdurch Dritte Daten
+                  in wiederum eigener Verantwortung verarbeiten.
+                </p>
+                <p>Unsere Datenschutzerklärung ist wie folgt gegliedert:</p>
+                <p>
+                  I. Informationen über uns als Verantwortliche<br></br>II.
+                  Rechte der Nutzer und Betroffenen<br></br>III. Informationen
+                  zur Datenverarbeitung
+                </p>
+                <h3 class="wp-block-heading">
+                  I. Informationen über uns als Verantwortliche
                 </h3>
-
-                <h4>1. Verantwortlicher und Datenschutzbeauftragter</h4>
                 <p>
-                  Verantwortlich für diese Website ist:
-                  <br />
-                  <strong>nifty thrifty</strong> / Inh. Thomas Meyer
-                  <br />
-                  <a href="mailto:kunst.raum@gmx.de">kunst.raum@gmx.de</a>
+                  Verantwortlicher Anbieter dieses Internetauftritts im
+                  datenschutzrechtlichen Sinne ist:
                 </p>
+                Nifty Thrifty<br></br>Thomas Meyer<br></br>Lange Str. 56
+                <br></br>49610 Quakenbrück
+                <p>
+                  Telefon: 015208994108<br></br>
+                  E-Mail: kunst.raum@gmx.de
+                </p>
+                <h3 class="wp-block-heading">
+                  II. Rechte der Nutzer und Betroffenen
+                </h3>
+                <p>
+                  Mit Blick auf die nachfolgend noch näher beschriebene
+                  Datenverarbeitung haben die Nutzer und Betroffenen das Recht
+                </p>
+                <ul class="wp-block-list">
+                  <li>
+                    auf Bestätigung, ob sie betreffende Daten verarbeitet
+                    werden, auf Auskunft über die verarbeiteten Daten, auf
+                    weitere Informationen über die Datenverarbeitung sowie auf
+                    Kopien der Daten (vgl. auch Art. 15 DSGVO);
+                  </li>
 
-                <h4>
-                  2. Daten, die für die Bereitstellung der Website und die
-                  Erstellung der Protokolldateien verarbeitet werden
+                  <li>
+                    auf Berichtigung oder Vervollständigung unrichtiger bzw.
+                    unvollständiger Daten (vgl. auch Art. 16 DSGVO);
+                  </li>
+
+                  <li>
+                    auf unverzügliche Löschung der sie betreffenden Daten (vgl.
+                    auch Art. 17 DSGVO), oder, alternativ, soweit eine weitere
+                    Verarbeitung gemäß Art. 17 Abs. 3 DSGVO erforderlich ist,
+                    auf Einschränkung der Verarbeitung nach Maßgabe von Art. 18
+                    DSGVO;
+                  </li>
+
+                  <li>
+                    auf Erhalt der sie betreffenden und von ihnen
+                    bereitgestellten Daten und auf Übermittlung dieser Daten an
+                    andere Anbieter/Verantwortliche (vgl. auch Art. 20 DSGVO);
+                  </li>
+
+                  <li>
+                    auf Beschwerde gegenüber der Aufsichtsbehörde, sofern sie
+                    der Ansicht sind, dass die sie betreffenden Daten durch den
+                    Anbieter unter Verstoß gegen datenschutzrechtliche
+                    Bestimmungen verarbeitet werden (vgl. auch Art. 77 DSGVO).
+                  </li>
+                </ul>
+                <p>
+                  Darüber hinaus ist der Anbieter dazu verpflichtet, alle
+                  Empfänger, denen gegenüber Daten durch den Anbieter
+                  offengelegt worden sind, über jedwede Berichtigung oder
+                  Löschung von Daten oder die Einschränkung der Verarbeitung,
+                  die aufgrund der Artikel 16, 17 Abs. 1, 18 DSGVO erfolgt, zu
+                  unterrichten. Diese Verpflichtung besteht jedoch nicht, soweit
+                  diese Mitteilung unmöglich oder mit einem unverhältnismäßigen
+                  Aufwand verbunden ist. Unbeschadet dessen hat der Nutzer ein
+                  Recht auf Auskunft über diese Empfänger.
+                </p>
+                <p>
+                  <strong>
+                    Ebenfalls haben die Nutzer und Betroffenen nach Art. 21
+                    DSGVO das Recht auf Widerspruch gegen die künftige
+                    Verarbeitung der sie betreffenden Daten, sofern die Daten
+                    durch den Anbieter nach Maßgabe von Art. 6 Abs. 1 lit. f)
+                    DSGVO verarbeitet werden. Insbesondere ist ein Widerspruch
+                    gegen die Datenverarbeitung zum Zwecke der Direktwerbung
+                    statthaft.
+                  </strong>
+                </p>
+                <h3 class="wp-block-heading">
+                  III. Informationen zur Datenverarbeitung
+                </h3>
+                <p>
+                  Ihre bei Nutzung unseres Internetauftritts verarbeiteten Daten
+                  werden gelöscht oder gesperrt, sobald der Zweck der
+                  Speicherung entfällt, der Löschung der Daten keine
+                  gesetzlichen Aufbewahrungspflichten entgegenstehen und
+                  nachfolgend keine anderslautenden Angaben zu einzelnen
+                  Verarbeitungsverfahren gemacht werden.
+                </p>
+                <h4 class="jet-listing-dynamic-field__content">Cookies</h4>
+                <h5>a) Sitzungs-Cookies/Session-Cookies</h5>
+                <p>
+                  Wir verwenden mit unserem Internetauftritt sog. Cookies.
+                  Cookies sind kleine Textdateien oder andere
+                  Speichertechnologien, die durch den von Ihnen eingesetzten
+                  Internet-Browser auf Ihrem Endgerät ablegt und gespeichert
+                  werden. Durch diese Cookies werden im individuellen Umfang
+                  bestimmte Informationen von Ihnen, wie beispielsweise Ihre
+                  Browser- oder Standortdaten oder Ihre IP-Adresse, verarbeitet.
+                </p>
+                <p>
+                  Durch diese Verarbeitung wird unser Internetauftritt
+                  benutzerfreundlicher, effektiver und sicherer, da die
+                  Verarbeitung bspw. die Wiedergabe unseres Internetauftritts in
+                  unterschiedlichen Sprachen oder das Angebot einer
+                  Warenkorbfunktion ermöglicht.
+                </p>
+                <p>
+                  Rechtsgrundlage dieser Verarbeitung ist Art. 6 Abs. 1 lit b.)
+                  DSGVO, sofern diese Cookies Daten zur Vertragsanbahnung oder
+                  Vertragsabwicklung verarbeitet werden.
+                </p>
+                <p>
+                  Falls die Verarbeitung nicht der Vertragsanbahnung oder
+                  Vertragsabwicklung dient, liegt unser berechtigtes Interesse
+                  in der Verbesserung der Funktionalität unseres
+                  Internetauftritts. Rechtsgrundlage ist in dann Art. 6 Abs. 1
+                  lit. f) DSGVO.
+                </p>
+                <p>
+                  Mit Schließen Ihres Internet-Browsers werden diese
+                  Session-Cookies gelöscht.
+                </p>
+                <h5>b) Drittanbieter-Cookies</h5>
+                <p>
+                  Gegebenenfalls werden mit unserem Internetauftritt auch
+                  Cookies von Partnerunternehmen, mit denen wir zum Zwecke der
+                  Werbung, der Analyse oder der Funktionalitäten unseres
+                  Internetauftritts zusammenarbeiten, verwendet.
+                </p>
+                <p>
+                  Die Einzelheiten hierzu, insbesondere zu den Zwecken und den
+                  Rechtsgrundlagen der Verarbeitung solcher
+                  Drittanbieter-Cookies, entnehmen Sie bitte den nachfolgenden
+                  Informationen.
+                </p>
+                <h5>c) Beseitigungsmöglichkeit</h5>
+                <p>
+                  Sie können die Installation der Cookies durch eine Einstellung
+                  Ihres Internet-Browsers verhindern oder einschränken.
+                  Ebenfalls können Sie bereits gespeicherte Cookies jederzeit
+                  löschen. Die hierfür erforderlichen Schritte und Maßnahmen
+                  hängen jedoch von Ihrem konkret genutzten Internet-Browser ab.
+                  Bei Fragen benutzen Sie daher bitte die Hilfefunktion oder
+                  Dokumentation Ihres Internet-Browsers oder wenden sich an
+                  dessen Hersteller bzw. Support. Bei sog. Flash-Cookies kann
+                  die Verarbeitung allerdings nicht über die Einstellungen des
+                  Browsers unterbunden werden. Stattdessen müssen Sie insoweit
+                  die Einstellung Ihres Flash-Players ändern. Auch die hierfür
+                  erforderlichen Schritte und Maßnahmen hängen von Ihrem konkret
+                  genutzten Flash-Player ab. Bei Fragen benutzen Sie daher bitte
+                  ebenso die Hilfefunktion oder Dokumentation Ihres
+                  Flash-Players oder wenden sich an den Hersteller bzw.
+                  Benutzer-Support.
+                </p>
+                <p>
+                  Sollten Sie die Installation der Cookies verhindern oder
+                  einschränken, kann dies allerdings dazu führen, dass nicht
+                  sämtliche Funktionen unseres Internetauftritts vollumfänglich
+                  nutzbar sind.
+                </p>
+                <h4 class="jet-listing-dynamic-field__content">Serverdaten</h4>
+                <p>
+                  Aus technischen Gründen, insbesondere zur Gewährleistung eines
+                  sicheren und stabilen Internetauftritts, werden Daten durch
+                  Ihren Internet-Browser an uns bzw. an unseren
+                  Webspace-Provider übermittelt. Mit diesen sog. Server-Logfiles
+                  werden u.a. Typ und Version Ihres Internetbrowsers, das
+                  Betriebssystem, die Website, von der aus Sie auf unseren
+                  Internetauftritt gewechselt haben (Referrer URL), die
+                  Website(s) unseres Internetauftritts, die Sie besuchen, Datum
+                  und Uhrzeit des jeweiligen Zugriffs sowie die IP-Adresse des
+                  Internetanschlusses, von dem aus die Nutzung unseres
+                  Internetauftritts erfolgt, erhoben.
+                </p>
+                <p>
+                  Diese so erhobenen Daten werden vorrübergehend gespeichert,
+                  dies jedoch nicht gemeinsam mit anderen Daten von Ihnen.
+                </p>
+                <p>
+                  Diese Speicherung erfolgt auf der Rechtsgrundlage von Art. 6
+                  Abs. 1 lit. f) DSGVO. Unser berechtigtes Interesse liegt in
+                  der Verbesserung, Stabilität, Funktionalität und Sicherheit
+                  unseres Internetauftritts.
+                </p>
+                <p>
+                  Die Daten werden spätestens nach sieben Tage wieder gelöscht,
+                  soweit keine weitere Aufbewahrung zu Beweiszwecken
+                  erforderlich ist. Andernfalls sind die Daten bis zur
+                  endgültigen Klärung eines Vorfalls ganz oder teilweise von der
+                  Löschung ausgenommen.
+                </p>
+                <h4 class="jet-listing-dynamic-field__content">Instagram</h4>
+                <p>
+                  Zur Bewerbung unserer Produkte und Leistungen sowie zur
+                  Kommunikation mit Interessenten oder Kunden betreiben wir eine
+                  Firmenpräsenz auf der Plattform Instagram.
+                </p>
+                <p>
+                  Auf dieser Social-Media-Plattform sind wir gemeinsam mit der
+                  Meta Platforms Ireland Limited, 4 Grand Canal Square, Dublin
+                  2, Irland, verantwortlich.
+                </p>
+                <p>
+                  Der Datenschutzbeauftragte von Instagram kann über ein
+                  Kontaktformular erreicht werden:
+                </p>
+                <p>
+                  <a
+                    href="https://www.facebook.com/help/contact/540977946302970"
+                    rel="nofollow noopener"
+                    target="_blank"
+                  >
+                    https://www.facebook.com/help/contact/540977946302970
+                  </a>
+                </p>
+                <p>
+                  Die gemeinsame Verantwortlichkeit haben wir in einer
+                  Vereinbarung bezüglich der jeweiligen Verpflichtungen im Sinne
+                  der DSGVO geregelt. Diese Vereinbarung, aus der sich die
+                  gegenseitigen Verpflichtungen ergeben, ist unter dem folgenden
+                  Link abrufbar:
+                </p>
+                <p>
+                  <a
+                    href="https://www.facebook.com/legal/terms/page_controller_addendum"
+                    rel="nofollow noopener"
+                    target="_blank"
+                  >
+                    https://www.facebook.com/legal/terms/page_controller_addendum
+                  </a>
+                </p>
+                <p>
+                  Rechtsgrundlage für die dadurch erfolgende und nachfolgend
+                  wiedergegebene Verarbeitung von personenbezogenen Daten ist
+                  Art. 6 Abs. 1 lit. f DSGVO. Unser berechtigtes Interesse
+                  besteht an der Analyse, der Kommunikation sowie dem Absatz und
+                  der Bewerbung unserer Produkte und Leistungen.
+                </p>
+                <p>
+                  Rechtsgrundlage kann auch eine Einwilligung des Nutzers gemäß
+                  Art. 6 Abs. 1 lit. a DSGVO gegenüber dem Plattformbetreiber
+                  sein. Die Einwilligung hierzu kann der Nutzer nach Art. 7 Abs.
+                  3 DSGVO jederzeit durch eine Mitteilung an den
+                  Plattformbetreiber für die Zukunft widerrufen.
+                </p>
+                <p>
+                  Bei dem Aufruf unseres Onlineauftritts auf der Plattform
+                  Instagram werden von der Meta Platforms Ireland Limited als
+                  Betreiberin der Plattform in der EU Daten des Nutzers (z.B.
+                  persönliche Informationen, IP-Adresse etc.) verarbeitet.
+                </p>
+                <p>
+                  Diese Daten des Nutzers dienen zu statistischen Informationen
+                  über die Inanspruchnahme unserer Firmenpräsenz auf Instagram.
+                  Die Meta Platforms Ireland Limited nutzt diese Daten zu
+                  Marktforschungs- und Werbezwecken sowie zur Erstellung von
+                  Profilen der Nutzer. Anhand dieser Profile ist es der Meta
+                  Platforms Ireland Limited beispielsweise möglich, die Nutzer
+                  innerhalb und außerhalb von Instagram interessenbezogen zu
+                  bewerben. Ist der Nutzer zum Zeitpunkt des Aufrufes in seinem
+                  Account auf Instagram eingeloggt, kann die Meta Platforms
+                  Ireland Limited zudem die Daten mit dem jeweiligen Nutzerkonto
+                  verknüpfen.
+                </p>
+                <p>
+                  Im Falle einer Kontaktaufnahme des Nutzers über Instagram
+                  werden die bei dieser Gelegenheit eingegebenen
+                  personenbezogenen Daten des Nutzers zur Bearbeitung der
+                  Anfrage genutzt. Die Daten des Nutzers werden bei uns
+                  gelöscht, sofern die Anfrage des Nutzers abschließend
+                  beantwortet wurde und keine gesetzlichen
+                  Aufbewahrungspflichten, wie z.B. bei einer anschließenden
+                  Vertragsabwicklung, entgegenstehen.
+                </p>
+                <p>
+                  Zur Verarbeitung der Daten werden von der Meta Platforms
+                  Ireland Limited ggf. auch Cookies gesetzt.
+                </p>
+                <p>
+                  Sollte der Nutzer mit dieser Verarbeitung nicht einverstanden
+                  sein, so besteht die Möglichkeit, die Installation der Cookies
+                  durch eine entsprechende Einstellung des Browsers zu
+                  verhindern. Bereits gespeicherte Cookies können ebenfalls
+                  jederzeit gelöscht werden. Die Einstellungen hierzu sind vom
+                  jeweiligen Browser abhängig. Bei Flash-Cookies lässt sich die
+                  Verarbeitung nicht über die Einstellungen des Browsers
+                  unterbinden, sondern durch die entsprechende Einstellung des
+                  Flash-Players. Sollte der Nutzer die Installation der Cookies
+                  verhindern oder einschränken, kann dies dazu führen, dass
+                  nicht sämtliche Funktionen von Facebook vollumfänglich nutzbar
+                  sind.
+                </p>
+                <p>
+                  Näheres zu den Verarbeitungstätigkeiten, deren Unterbindung
+                  und zur Löschung der von Instagram verarbeiteten Daten finden
+                  sich in der Datenrichtlinie von Instagram:
+                </p>
+                <p>
+                  <a
+                    href="https://help.instagram.com/519522125107875"
+                    rel="nofollow noopener"
+                    target="_blank"
+                  >
+                    https://help.instagram.com/519522125107875
+                  </a>
+                </p>
+                <p>
+                  Es ist nicht ausgeschlossen, dass die Verarbeitung durch die
+                  Meta Platforms Ireland Limited auch über die Meta Platforms,
+                  Inc., 1601 Willow Road, Menlo Park, California 94025 in den
+                  USA erfolgt.
+                </p>
+                <h4 class="jet-listing-dynamic-field__content">
+                  Allgemeine Verlinkung auf Profile bei Drittanbietern
                 </h4>
-
-                <h5>a. Welche Daten werden für welchen Zweck verarbeitet?</h5>
                 <p>
-                  Bei jedem Zugriff auf Inhalte der Website werden vorübergehend
-                  Daten gespeichert, die möglicherweise eine Identifizierung
-                  zulassen. Dazu gehören:
+                  Der Anbieter setzt auf der Website eine Verlinkung auf die
+                  nachstehend aufgeführten sozialen Netzwerke ein.
                 </p>
-                <ul>
-                  <li>Datum und Uhrzeit des Zugriffs</li>
-                  <li>IP-Adresse</li>
-                  <li>Hostname des zugreifenden Rechners</li>
-                  <li>Website, von der aus die Website aufgerufen wurde</li>
-                  <li>Websites, die über die Website aufgerufen werden</li>
-                  <li>Besuchte Seite auf unserer Website</li>
-                  <li>Meldung, ob der Abruf erfolgreich war</li>
-                  <li>Übertragene Datenmenge</li>
-                  <li>Informationen über Browsertyp und Version</li>
-                  <li>Betriebssystem</li>
-                </ul>
                 <p>
-                  Die Speicherung ist erforderlich, um den Website-Betrieb
-                  sicherzustellen. Eine weitere Speicherung erfolgt nur zur
-                  Sicherstellung der Funktionsfähigkeit und Sicherheit der
-                  Systeme.
+                  Rechtsgrundlage ist hierbei Art. 6 Abs. 1 lit. f DSGVO. Das
+                  berechtigte Interesse des Anbieters besteht an der
+                  Verbesserung der Nutzungsqualität der Website.
                 </p>
-
-                <h5>b. Rechtsgrundlage</h5>
-                <p>Art. 6 Abs. 1 lit. f DS-GVO</p>
-
-                <h5>c. Empfänger der Daten</h5>
                 <p>
-                  Die Website wird bei Vercel Inc., 340 S Lemon Ave #4133,
-                  Walnut, CA 91789, USA gehostet. Vercel empfängt die oben
-                  genannten Daten als Auftragsverarbeiter.
+                  Die Einbindung der Plugins erfolgt dabei über eine verlinkte
+                  Grafik. Erst durch einen Klick auf die entsprechende Grafik
+                  wird der Nutzer zu dem Dienst des jeweiligen sozialen
+                  Netzwerks weitergeleitet.
                 </p>
-
-                <h5>d. Speicherdauer</h5>
                 <p>
-                  Die Daten werden gelöscht, sobald sie für den jeweiligen Zweck
-                  nicht mehr erforderlich sind. Protokolldateien werden bis zu
-                  24 Stunden direkt für Administratoren zugänglich gespeichert
-                  und nach maximal vier Wochen endgültig gelöscht.
+                  Nach der Weiterleitung des Kunden werden durch das jeweilige
+                  Netzwerk Informationen über den Nutzer erfasst. Dies sind
+                  zunächst Daten wie IP-Adresse, Datum, Uhrzeit und besuchte
+                  Seite. Ist der Nutzer währenddessen in seinem Benutzerkonto
+                  des jeweiligen Netzwerks eingeloggt, kann der
+                  Netzwerk-Betreiber ggf. die gesammelten Informationen des
+                  konkreten Besuches des Nutzers dem persönlichen Account des
+                  Nutzers zuordnen. Interagiert der Nutzer über einen
+                  „Teilen“-Button des jeweiligen Netzwerks, können diese
+                  Informationen in dem persönlichen Benutzerkonto des Nutzers
+                  gespeichert und ggf. veröffentlicht werden. Will der Nutzer
+                  verhindern, dass die gesammelten Informationen unmittelbar
+                  seinem Benutzerkonto zugeordnet werden, muss sich der Nutzer
+                  vor dem Anklicken der Grafik ausloggen. Zudem besteht die
+                  Möglichkeit, das jeweilige Benutzerkonto entsprechend zu
+                  konfigurieren.
                 </p>
-
-                <h4>3. Betroffenenrechte</h4>
-                <ul>
-                  <li>Recht auf Auskunft (Art. 15 DS-GVO)</li>
-                  <li>Recht auf Widerspruch (Art. 21 DS-GVO)</li>
-                  <li>Recht auf Berichtigung (Art. 16 DS-GVO)</li>
-                  <li>Recht auf Löschung (Art. 17 DS-GVO)</li>
-                  <li>
-                    Recht auf Einschränkung der Verarbeitung (Art. 18 DS-GVO)
-                  </li>
-                  <li>
-                    Recht auf Beschwerde bei Aufsichtsbehörde (Art. 77 DS-GVO)
-                  </li>
-                  <li>
-                    Recht auf Datenübertragbarkeit (Art. 20 DS-GVO) – soweit
-                    anwendbar
-                  </li>
-                </ul>
-
-                <h3>II. Recht auf Widerspruch gemäß Art. 21 Abs. 1 DS-GVO</h3>
+                <p>Folgende soziale Netzwerke sind vom Anbieter verlinkt:</p>
+                <h4 class="jet-listing-dynamic-field__content">Instagram</h4>
                 <p>
-                  Sie können jederzeit aus Gründen, die sich aus Ihrer
-                  besonderen Situation ergeben, gegen die Verarbeitung Ihrer
-                  personenbezogenen Daten Widerspruch einlegen. Die
-                  Datenverarbeitung zur Bereitstellung der Website ist jedoch
-                  zwingend erforderlich und wird weiterhin durchgeführt, soweit
-                  zwingende berechtigte Gründe vorliegen.
+                  Meta Platforms Ireland Limited, 4 Grand Canal Square, Dublin
+                  2, Irland.
                 </p>
-
+                <p>
+                  Datenschutzerklärung:&nbsp;
+                  <a
+                    href="https://help.instagram.com/519522125107875"
+                    rel="nofollow noopener"
+                    target="_blank"
+                  >
+                    https://help.instagram.com/519522125107875
+                  </a>
+                </p>
+                <p>
+                  <a
+                    href="https://www.generator-datenschutzerklärung.de"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    Muster-Datenschutzerklärung
+                  </a>{" "}
+                  der{" "}
+                  <a
+                    href="https://www.bewertung-löschen24.de"
+                    rel="nofollow noopener"
+                    target="_blank"
+                  >
+                    Anwaltskanzlei Weiß &amp; Partner
+                  </a>
+                </p>
                 <div className="contact-info">
                   <h4>Kontakt</h4>
                   <p>Bei Fragen zum Datenschutz wenden Sie sich bitte an:</p>
