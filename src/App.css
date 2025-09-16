@@ -9,6 +9,8 @@
   .avatar-image {
     width: 120px;
     height: 120px;
+    border-radius: 50%;           /* 👈 WICHTIG: Macht den Kreis! */
+    object-fit: cover;            /* 👈 WICHTIG: Verhindert Verzerrung */
     align-self: center;
   }
 }
@@ -1566,4 +1568,5 @@ h4 {
     border-color: #ff0000;
   } /* Roter Cursor */
 }
+
 
