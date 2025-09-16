@@ -631,7 +631,7 @@ const NavBar = () => {
   ];
 
   return (
-    <nav className="nav-bar">
+    <nav className={`nav-bar ${isMenuOpen ? "menu-open" : ""}`}>
       <div className="nav-container">
         <div className="nav-brand">
           <Link to="/" className="brand-link">
