@@ -159,7 +159,6 @@
   align-items: center;
   justify-content: space-between;
   padding: 2rem;
-  border-bottom: 1px solid var(--gray-200);
 }
 
 .instagram-profile {
@@ -404,16 +403,12 @@
 }
 
 .avatar-image {
-  width: 150px;
-  height: 150px;
-  border-radius: 1rem;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-  border: 3px solid var(--gold);
-  float: left;
-  margin: 0 2rem 1rem 0;
-  shape-outside: border-box;
-  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
 }
 
 .avatar-image:hover {
@@ -1176,7 +1171,8 @@ body {
   margin-top: 2rem;
 }
 
-.contact-info a {
+.contact-info a,
+h4 {
   color: var(--gold);
   text-decoration: none;
   font-weight: 600;
@@ -1423,4 +1419,142 @@ body {
   .stripes-container {
     display: none;
   }
+}
+
+@media (max-width: 480px) {
+  .main-title {
+    font-size: 2rem;
+  }
+  .sub-title {
+    font-size: 1rem;
+  }
+  .text-paragraph {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
+
+/* === Datenschutzerklärung Styling === */
+
+.privacy-statement {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  line-height: 1.7;
+}
+
+.legal-section {
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.section-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: black;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.subsection-heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-blue);
+  margin: 2rem 0 1rem 0;
+}
+
+.subsubsection-heading {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--primary-blue);
+  margin: 1.5rem 0 0.75rem 0;
+}
+
+.clause-heading {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--primary-blue);
+  margin: 1rem 0 0.5rem 0;
+}
+
+.legal-paragraph {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #333;
+}
+
+.legal-list {
+  margin: 1rem 0 1.5rem 2rem;
+  padding-left: 0;
+}
+
+.legal-list li {
+  margin-bottom: 0.75rem;
+  list-style-type: disc;
+  color: #444;
+}
+
+.legal-address {
+  font-style: normal;
+  margin: 1rem 0;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-left: 4px solid var(--gold);
+}
+
+.legal-link a {
+  color: var(--primary-blue);
+  text-decoration: underline;
+  word-break: break-all;
+}
+
+.legal-link a:hover {
+  color: var(--primary-blue + 90);
+}
+
+.highlight-box {
+  padding: 1rem;
+  background-color: #fff8e1;
+  border-left: 4px solid #ffc107;
+  margin: 1.5rem 0;
+}
+
+.contact-info-box {
+  background-color: #e8f5e8;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-top: 2rem;
+  border-left: 4px solid var(--primary-blue);
+}
+
+.contact-heading {
+  font-size: 1.3rem;
+  color: #2e7d32;
+  margin-bottom: 1rem;
+}
+
+.lightbox-overlay {
+  backdrop-filter: blur(5px);
+}
+
+.lightbox-content {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Optional: Tastatursteuerung für bessere Benutzerfreundlichkeit */
+.sub-title {
+  /* ... Ihre bestehenden Styles ... */
+  overflow: hidden; /* Versteckt den Text, der noch nicht "getippt" wurde */
+  white-space: nowrap; /* Verhindert Zeilenumbruch während der Animation */
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #ff0000;
+  } /* Roter Cursor */
 }
