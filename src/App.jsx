@@ -18,7 +18,8 @@ import {
 import { useEffect, useState } from "react";
 import { Menu, X, Clock, MapPin, Star, Heart } from "lucide-react";
 
-// Importing page components
+// Importin
+// g page components
 const Homepage = () => {
   const [activeTab, setActiveTab] = useState("Startseite");
 
@@ -43,6 +44,8 @@ const Homepage = () => {
     // Cleanup-Funktion, um das Intervall zu löschen, wenn die Komponente unmountet.
     return () => clearInterval(interval);
   }, []);
+
+  const [isWelcomeExpanded, setIsWelcomeExpanded] = useState(false);
 
   // 👇 Handler-Funktionen - ebenfalls auf oberster Ebene
   const openLightbox = (imageName, folder) => {
@@ -171,7 +174,13 @@ const Homepage = () => {
 
             <div className="text-content">
               <div className="welcome-card">
-                <p className="text-paragraph">
+                {/* Der Text */}
+                <p
+                  id="welcome-text"
+                  className={`text-paragraph ${
+                    isWelcomeExpanded ? "expanded" : ""
+                  }`}
+                >
                   <strong>Hallo, Ihr Lieben!</strong>
                   <br />
                   <br />
@@ -187,6 +196,25 @@ const Homepage = () => {
                   <br />
                   <i>Euer Thomas Meyer</i>
                 </p>
+                {/* Der Button wird NUR auf mobilen Geräten UNTER dem Text angezeigt */}
+                <button
+                  className="toggle-welcome-btn mobile-only"
+                  onClick={() => setIsWelcomeExpanded(!isWelcomeExpanded)}
+                  aria-expanded={isWelcomeExpanded}
+                  aria-controls="welcome-text"
+                >
+                  {/* Zwei nach unten zeigende Pfeile, wenn eingeklappt */}
+                  {/* Zwei nach oben zeigende Pfeile, wenn ausgeklappt */}
+                  {isWelcomeExpanded ? (
+                    <>
+                      <span>▲</span>
+                    </>
+                  ) : (
+                    <>
+                      <span>▼</span>
+                    </>
+                  )}
+                </button>
               </div>
             </div>
 
