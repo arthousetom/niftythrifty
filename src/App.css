@@ -1558,7 +1558,7 @@ h4 {
 .toggle-welcome-btn {
   background: none;
   border: none;
-  color: #c70039; /* Passen Sie die Farbe an Ihr Design an */
+  color: var(--primary-blue);
   font-weight: bold;
   cursor: pointer;
   padding: 0.5rem 0 0 0; /* Etwas Abstand oben, kein Abstand unten */
@@ -1618,4 +1618,5 @@ h4 {
     display: block;
   }
 }
+
 
