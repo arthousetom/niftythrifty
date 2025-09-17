@@ -176,11 +176,9 @@ const Homepage = () => {
               <div className="welcome-card">
                 {/* Der Text */}
                 <p
-                  id="welcome-text"
-                  className={`text-paragraph ${
-                    isWelcomeExpanded ? "expanded" : ""
-                  }`}
-                >
+  id="welcome-text"
+  className={`text-paragraph welcome-text-toggle ${isWelcomeExpanded ? 'expanded' : ''}`}
+>
                   <strong>Hallo, Ihr Lieben!</strong>
                   <br />
                   <br />
