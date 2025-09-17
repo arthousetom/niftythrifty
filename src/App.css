@@ -1577,13 +1577,25 @@ h4 {
 }
 
 /* Der Text ist standardmäßig auf Mobile ausgeblendet */
-.text-paragraph {
+/* 👇 Diese Regel gilt NUR für den ein-/ausklappbaren Willkommenstext */
+.text-paragraph.welcome-text-toggle {
   max-height: 6em; /* Begrenzt die Höhe auf ca. 3 Zeilen */
   overflow: hidden;
   transition: max-height 0.3s ease;
   margin-bottom: 0; /* Entfernt den unteren Margin, damit der Button direkt darunter ist */
 }
 
+/* Wenn der Text "expanded" ist, wird er vollständig angezeigt */
+.text-paragraph.welcome-text-toggle.expanded {
+  max-height: none;
+}
+
+/* Auf Desktop wird der Willkommenstext immer vollständig angezeigt */
+@media (min-width: 768px) {
+  .text-paragraph.welcome-text-toggle {
+    max-height: none;
+  }
+}
 /* Wenn der Text "expanded" ist, wird er vollständig angezeigt */
 .text-paragraph.expanded {
   max-height: none;
@@ -1606,3 +1618,4 @@ h4 {
     display: block;
   }
 }
+
