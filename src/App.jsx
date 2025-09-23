@@ -717,10 +717,7 @@ const Datenschutzerklaerung = () => {
                   Rechte der Nutzer und Betroffenen<br></br>III. Informationen
                   zur Datenverarbeitung
                 </p>
-              </section>
 
-              {/* SECTION I */}
-              <section className="legal-section">
                 <h3 className="subsection-heading">
                   I. Informationen über uns als Verantwortliche
                 </h3>
@@ -736,10 +733,7 @@ const Datenschutzerklaerung = () => {
                   Telefon: 015208994108<br></br>
                   E-Mail: kunst.raum@gmx.de
                 </p>
-              </section>
 
-              {/* SECTION II */}
-              <section className="legal-section">
                 <h3 className="subsection-heading">
                   II. Rechte der Nutzer und Betroffenen
                 </h3>
@@ -799,10 +793,7 @@ const Datenschutzerklaerung = () => {
                     statthaft.
                   </strong>
                 </p>
-              </section>
 
-              {/* SECTION III */}
-              <section className="legal-section">
                 <h3 className="subsection-heading">
                   III. Informationen zur Datenverarbeitung
                 </h3>
