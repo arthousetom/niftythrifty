@@ -82,70 +82,53 @@ const Homepage = () => {
   }, [isLightboxOpen]); // Abhängigkeit ist hier korrekt
 
   const checkOpeningHours = () => {
-    const now = new Date();
-    const day = now.getDay(); // 0 = Sunday, 1 = Monday, ..., 6 = Saturday
-    const hours = now.getHours();
-    const minutes = now.getMinutes();
-    const currentTime = hours * 60 + minutes; // Convert to minutes for easier comparison
+  const now = new Date();
+  const day = now.getDay();
+  const hours = now.getHours();
+  const minutes = now.getMinutes();
+  const currentTime = hours * 60 + minutes;
 
-    // Opening hours: Mi-Fr 10-18, Sa 10-14
-    // Wednesday = 3, Thursday = 4, Friday = 5, Saturday = 6
-    if (day >= 3 && day <= 5) {
-      // Wednesday to Friday
-      return currentTime >= 600 && currentTime < 1080; // 10:00 to 18:00
-    } else if (day === 6) {
-      // Saturday
-      return currentTime >= 600 && currentTime < 840; // 10:00 to 14:00
-    }
-    return false; // Closed on Sunday, Monday, Tuesday
-  };
+  // Geändert: day >= 2 statt day >= 3 (schließt Di., Mi., Do., Fr. ein)
+  if (day >= 2 && day <= 5) {
+    return currentTime >= 600 && currentTime < 1080; // 10:00 bis 18:00
+  } else if (day === 6) {
+    return currentTime >= 600 && currentTime < 840; // 10:00 bis 14:00
+  }
+  return false;
+};
 
   const { scrollYProgress } = useScroll();
   const y1 = useTransform(scrollYProgress, [0, 1], [0, -50]);
   const y2 = useTransform(scrollYProgress, [0, 1], [0, 50]);
 
-  const getNextOpeningTime = () => {
-    const now = new Date();
-    const day = now.getDay();
+const getNextOpeningTime = () => {
+  const now = new Date();
+  const day = now.getDay();
+  const hours = now.getHours();
+  const minutes = now.getMinutes();
+  const currentTime = hours * 60 + minutes;
 
-    if (day === 0 || day === 1 || day === 2) {
-      // Sunday, Monday, Tuesday
-      return "Mittwoch 10:00";
-    } else if (day === 3 || day === 4 || day === 5) {
-      // Wednesday, Thursday, Friday
-      const hours = now.getHours();
-      const minutes = now.getMinutes();
-      const currentTime = hours * 60 + minutes;
-
-      if (currentTime < 600) {
-        // Before 10:00
-        return "heute 10:00";
-      } else if (currentTime >= 1080) {
-        // After 18:00
-        if (day === 5) {
-          // Friday
-          return "Samstag 10:00";
-        } else {
-          return "morgen 10:00";
-        }
-      }
-    } else if (day === 6) {
-      // Saturday
-      const hours = now.getHours();
-      const minutes = now.getMinutes();
-      const currentTime = hours * 60 + minutes;
-
-      if (currentTime < 600) {
-        // Before 10:00
-        return "heute 10:00";
-      } else if (currentTime >= 840) {
-        // After 14:00
-        return "Mittwoch 10:00";
-      }
+  if (day === 0 || day === 1) { 
+    // Sonntag oder Montag -> Nächste Öffnung ist Dienstag
+    return "Dienstag 10:00";
+  } else if (day >= 2 && day <= 5) {
+    // Dienstag bis Freitag
+    if (currentTime < 600) {
+      return "heute 10:00";
+    } else if (currentTime >= 1080) {
+      if (day === 5) return "Samstag 10:00";
+      return "morgen 10:00";
     }
-
-    return "";
-  };
+  } else if (day === 6) {
+    // Samstag
+    if (currentTime < 600) {
+      return "heute 10:00";
+    } else if (currentTime >= 840) {
+      return "Dienstag 10:00"; // Geändert von Mittwoch auf Dienstag
+    }
+  }
+  return "";
+};
 
   return (
     <div className="homepage-content">
@@ -224,16 +207,17 @@ const Homepage = () => {
 
               <div className="hours-status-container">
                 <div className="hours-box">
-                  <div className="hours-grid">
-                    <div className="hours-item">
-                      <span className="day">Mi. - Fr.</span>
-                      <span className="time">10-18 Uhr</span>
-                    </div>
-                    <div className="hours-item">
-                      <span className="day">Samstag</span>
-                      <span className="time">10-14 Uhr</span>
-                    </div>
-                  </div>
+                 <div className="hours-grid">
+  <div className="hours-item">
+    {/* Geändert von Mi. auf Di. */}
+    <span className="day">Di. - Fr.</span> 
+    <span className="time">10-18 Uhr</span>
+  </div>
+  <div className="hours-item">
+    <span className="day">Samstag</span>
+    <span className="time">10-14 Uhr</span>
+  </div>
+</div>
                 </div>
 
                 <div className="store-status">
